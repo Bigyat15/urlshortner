@@ -10,6 +10,7 @@ function Navbar() {
                 <div className="font-bold text-xl">
                     <a href="#">Logo</a>
                 </div>
+                <button className="md:hidden p-2 focus-outline-none" onClick={() = setIsOpen(!isOpen)}></button>
                 <div className="space-x-5">
                     <a href="#">Home</a>
                     <a href="#">About</a>
@@ -48,6 +49,7 @@ function Navbar() {
                     )}
                 </div>
             </nav>
+            <div></div>
         </>
     );
 }
