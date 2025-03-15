@@ -56,7 +56,7 @@ The backend will be running at `http://127.0.0.1:8000/`.
 
 ### 1. Navigate to the Frontend Directory
 ```bash
-cd ../frontend
+cd ../urlshortner
 ```
 
 ### 2. Install Dependencies
