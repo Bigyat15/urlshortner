@@ -11,7 +11,7 @@ def create_short_url(request):
     data = request.data
     serializer = ShortUrlSerializer(data=data)
     if serializer.is_valid():
-        short_url = serializer.save()
+        serializer.save()
         return Response(serializer.data,status=status.HTTP_201_CREATED)
     else:
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
