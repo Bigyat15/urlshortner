@@ -56,7 +56,18 @@ function Hero(){
             (
                 displayUrls.map((displayUrl) => (
                     <div key={displayUrl.id} className=" p-4 rounded-lg  mb-4">
-                        <h2 className="font-semibold text-lg">http://127.0.0.1:8000/url/{displayUrl.short_code}</h2>
+<a
+  href={`http://127.0.0.1:8000/url/${displayUrl.short_code}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-500 hover:underline"
+  onClick={() => setTimeout(fetchUrl, 2000)} // Fetch updated data after 2 seconds
+>
+  {`http://127.0.0.1:8000/url/${displayUrl.short_code}`}
+</a>
+
+
+                        <p>Visit Count:{displayUrl.visit_count}</p>
                     </div>
                     
                 ))
